@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.heading h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+.header{
+    min-height: 8vh;
+    background-color: transparent;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+
+}
+.nav-list ul{
+    list-style: none;
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    overflow-x: hidden;
+    transition: 0.5s;
+
+}
+.nav-list ul.active{
+    left: 0%;
+}
+.nav-list ul a{
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    padding: 20px;
+}
+.nav-list ul li:hover a{
+    color: red;
+}
+.hamburger{
+    height: 50px;
+    width: 50px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    z-index: 100;
+    cursor:pointer;
+    margin-right: 20px;
+}
+#hero{
+    background-image: url(images/header-img.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
+}
+.hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    color: white;
+    position: relative;
+}
+.services-btn{
+    display: inline-block;
+    color: white;
+    font-size: 2rem;
+    border: 2px solid red;
+    padding: 10px 30px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+.services-btn:hover{
+    background-color: red;
+}
+.services{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+.services-top{
+    margin: 0 auto;
+    max-width: 500px;
+}
+p{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.services-title{
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+.services-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.service-item{
+    background-image: url(images/services.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.service-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1;
+}
+.services-bottom .icon img{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.service-item h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.service-item p{
+    color: white;
+    text-align: left;
+}
+
+.projects{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+.all-projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    /* border: 2px solid #000; */
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+.project-info{
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-basis: 50%;
+}
+.project-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.project-info h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.project-info p{
+    color: rgb(78, 73, 73);
+}
+.project-img{
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.project-img::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.project-img img{
+    transition: 0.5s;
+
+}
+.project-item:hover .project-img img{
+    transform: scale(1.1);
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.contact-items{
+    width: 400px;
+}
+.contact-item{
+    width: 80%;
+    text-align: center;
+    /* border: 2px solid #000; */
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+}
+.contact-item .icon{
+    width: 70px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.contact-head{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.contact-sub{
+    font-size: 1.3rem;
+    line-height: 20px;
+    font-weight: 500;
+}
+#footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+.footer{
+    min-height: 200px;
+    flex-direction: column;
+    
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+.footer h2{
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.social-icon{
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.social-item{
+    height: 30px;
+    width: 30px;
+    margin: 0 5px;
+}
+.footer-para{
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+@media only screen and (min-width:768px){
+    #hero h1{
+        font-size: 7rem;
+    }
+    .services-btn{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    .contact{
+        padding: 100px 0 ;
+    }
+    .contact-items{
+        width: 100%;
+        display: flex;
+        margin-top: 50px;
+    }
+    .contact-item{
+        width: 30%;
+        margin: 0;
+        margin-left: 10px;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .contact-item .icon{
+        height: 80px;
+        width: 100px;
+    }
+    .contact-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .icon img{
+        object-fit: contain;
+    }
+    .project-item{
+        flex-direction: row;
+        height: 400px;
+        width: 100%;
+    }
+    .project-item:nth-child(even){
+        flex-direction: row-reverse;
+    }
+    .project-img{
+        height: 100%;
+    }
+    .service-item{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+}
+@media only screen and (min-width:1200px){
+    .hamburger{
+        display: none;
+    }
+    .nav-list ul{
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+
+    }
+    .nav-list ul li{
+        display: inline-block;
+    }
+    .nav-list ul li a{
+        font-size: 1.8rem;
+    }
+    .service-item{
+        flex-basis: 22%;
+        margin: 1.5%;
+    }
+}
